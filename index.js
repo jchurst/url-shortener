@@ -6,7 +6,7 @@ var Url = require('./app/url');
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://jimmyc:tulipOne@ds125906.mlab.com:25906/urls';
 var mongoOptions = {db: {safe: true}};
 var port = process.env.PORT || 5000;
-var baseUrl = process.env.BASE_URL || ('https://flame-chord.glitch.me' + '/');
+var baseUrl = process.env.BASE_URL || ('http://www.flame-chord.glitch.me' + '/');
 
 var mongoose = require('mongoose');
 mongoose.connect(mongoUri, mongoOptions);
@@ -22,16 +22,17 @@ app.set('port', port);
 
 app.get('/new/*', function(req, res) {
     var original = req.url.replace('/new/', '');
-    if (!validUrl.isWebUri(original)) {
-        return res.json({error: "URL invalid"});
-    }
-    Url.create({original_url: original}, function(err, created) {
+    if (validUrl.isUri(original)) {
+        Url.create({original_url: original}, function(err, created) {
         if (err) return res.status(500).send(err);
         res.json({
             original_url: created.original_url,
             short_url: baseUrl + created.short_id
         });
-    });
+      });
+    } else {
+        return res.json({error: "URL invalid"});
+    }
 });
 
 app.get('/*', function(req, res) {
