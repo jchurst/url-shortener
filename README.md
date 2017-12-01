@@ -14,30 +14,30 @@ Created by JC Hurst
 ## Example invalid URL:
 
 ```js
-https://flame-chord.glitch.me/new/http://foo.com
+http://www.flame-chord.glitch.me/new/foo.com
 ```
 
 ## Example creation usage:
 
 ```js
-https://flame-chord.glitch.me/new/https://www.google.com
+http://www.flame-chord.glitch.me/new/http://www.google.com
 ```
 
 ## Example creation output:
 
 ```js
-{"original_url":"https://google.com",
-"short_url":"https://flame-chord.glitch.me/BJDk4Wk-M"}
+{"original_url":"http://www.google.com",
+"short_url":"http://www.flame-chord.glitch.me/r1piS7ybz"}
 ```
 
 ## Usage:
 
 ```
-https://flame-chord.glitch.me/BJDk4Wk-M
+http://www.flame-chord.glitch.me/r1piS7ybz
 ```
 
 ### Will redirect to:
 
 ```
-https://www.google.com/
+http://www.google.com/
 ```
