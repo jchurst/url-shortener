@@ -3,9 +3,9 @@
 
 Created by JC Hurst
 
-[Github](https://github.com/jchurst) | [FreeCodeCamp](http://www.freecodecamp.com/jchurst) | [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Blog/Site](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
+[Github](https://github.com/jchurst) [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Blog/Site](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
 
-# FreeCodeCamp API - URL Shortener Microservice
+# URL Shortener Microservice
 ## User stories:
 1. I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
 2. If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
